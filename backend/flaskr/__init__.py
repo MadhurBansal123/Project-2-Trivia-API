@@ -221,7 +221,7 @@ def create_app(test_config=None):
 
     if not selection:
       # If selection is empty it means they are no question in this category
-      abort(400, {'message': 'No questions with category '+ category_id +' found.' })
+      abort(400)
 
     # Paginate and format question into list of dicts
     questions_paginated = paginate_questions(request, selection)
