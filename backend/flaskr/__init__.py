@@ -138,19 +138,12 @@ def create_app(test_config=None):
       questions_found = [question.format() for question in questions]
       selections = Question.query.order_by(Question.id).all() # needed for total_questions
       
-      # Also query for categories and return as list of dict
-      categories = Category.query.all()
-      categories_all = [category.format() for category in categories]
-      categories_returned = {}
-      for cat in categories_all:
-        categories_returned[cat['id']] = cat['type']
-
 
       return jsonify({
         'success': True,
         'questions': questions_found,
         'total_questions': len(selections),
-        'current_category' : categories_returned
+        'current_category' : None
       })
 
     # Get field informations from request body

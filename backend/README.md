@@ -305,14 +305,7 @@ This endpoint either creates a new question or returns search results.
 * Sample: `curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"searchTerm": "what"}'`<br>
 
         {
-        "current_category": {
-            "1": "Science",
-            "2": "Art",
-            "3": "Geography",
-            "4": "History",
-            "5": "Entertainment",
-            "6": "Sports"
-        },
+        "current_category": null,
         "questions": [
             {
             "answer": "Mona Lisa",
