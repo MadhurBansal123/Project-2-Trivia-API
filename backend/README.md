@@ -104,6 +104,7 @@ The API will return three types of errors:
   * Results are paginated in groups of 10.
   * Also returns list of categories and total number of questions.
 * Sample: `curl http://127.0.0.1:5000/questions`<br>
+
         {
             "categories": {
                 "1": "Science",
